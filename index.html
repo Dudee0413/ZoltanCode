@@ -10,7 +10,7 @@
 </head>
 <body>
   <header class="hero">
-    <img src="zoltancode-logo-dark.png" alt="ZoltanCode logó" class="logo">
+    <img src="ZoltanCode logo.png" alt="ZoltanCode logó" class="logo">
     <h1>Weboldalak, amik működnek.</h1>
     <p>Frontend fejlesztés kisvállalkozásoknak – gyors, mobilbarát, egyedi.</p>
     <a href="#kapcsolat" class="cta-button">Kapcsolatfelvétel</a>
@@ -36,13 +36,26 @@
 
     <section id="kapcsolat">
       <h2>Kapcsolat</h2>
-      <p>Írj nekem: <a href="mailto:hello@zoltancode.hu">hello@zoltancode.hu</a></p>
+      <form action="mailto:hello@zoltancode.hu" method="post" enctype="text/plain" class="contact-form">
+        <input type="text" name="name" placeholder="Név" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Üzenet..." required></textarea>
+        <button type="submit">Üzenet küldése</button>
+      </form>
+      <p>Vagy írj közvetlenül: <a href="mailto:hello@zoltancode.hu">hello@zoltancode.hu</a></p>
       <p>GitHub: <a href="https://github.com/zoltancode" target="_blank">github.com/zoltancode</a></p>
     </section>
 
     <section>
       <h2>Referencia</h2>
-      <p><a href="https://bea-oldala.hu" target="_blank">Bajusz Beata – Holisztikus mentor</a></p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Bajusz Beáta</h3>
+          <p>Holisztikus mentor</p>
+          <a href="https://bea-oldala.hu" target="_blank">bea-oldala.hu</a>
+        </div>
+        <!-- Itt további projektek is hozzáadhatók -->
+      </div>
     </section>
   </main>
 

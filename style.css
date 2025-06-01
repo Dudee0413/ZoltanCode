@@ -17,16 +17,32 @@ body {
   background-color: #000;
   text-align: center;
   padding: 4rem 2rem;
+  animation: fadeIn 1.5s ease-in;
 }
 
 .logo {
-  width: 150px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
   margin-bottom: 1rem;
+  box-shadow: 0 0 20px #43a047;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .hero h1 {
   font-size: 2.5rem;
   color: #e53935;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #e53935; }
+  to { text-shadow: 0 0 20px #43a047; }
 }
 
 .hero p {
@@ -86,10 +102,61 @@ a:hover {
   box-shadow: 0 0 12px #00e676;
 }
 
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  box-shadow: 0 0 5px #43a047;
+}
+
+.contact-form button {
+  padding: 0.75rem 1.5rem;
+  background-color: #e53935;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #c62828;
+}
+
 footer {
   text-align: center;
   padding: 1.5rem;
   font-size: 0.85rem;
   color: #888;
   border-top: 1px solid #2c2c2c;
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    flex-direction: column;
+  }
+  .card {
+    flex: 1 1 100%;
+  }
+  .logo {
+    width: 150px;
+    height: 150px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
 }
