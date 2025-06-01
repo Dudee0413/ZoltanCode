@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ZoltanCode – Egyedi weboldalak</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" />
 </head>
 <body>
-  <nav class="navbar">
-    <h1>ZoltanCode</h1>
-    <ul class="nav-links">
-      <li><a href="#rolam">Rólam</a></li>
-      <li><a href="#elonyok">Előnyök</a></li>
-      <li><a href="#referenciak">Referenciák</a></li>
-      <li><a href="#kapcsolat">Kapcsolat</a></li>
-    </ul>
-    <div class="language-switcher">
-      <a href="en.html">EN</a> |
-      <a href="de.html">DE</a> |
-      <a href="html.html" class="active">HU</a>
-    </div>
-  </nav>
 
+  <!-- ✅ Felső navigációs sáv -->
+  <div class="navbar">
+    <button id="langToggle" class="lang-toggle">🌐</button>
+    <h1 class="logo-text">ZoltanCode</h1>
+    <button id="menuToggle" class="menu-toggle">
+      <span></span>
+    </button>
+  </div>
+
+  <!-- 🌐 Nyelvválasztó -->
+  <div id="languageMenu" class="language-menu hidden">
+    <a href="index.html" class="active">HU</a>
+    <a href="de.html">DE</a>
+    <a href="en.html">EN</a>
+  </div>
+
+  <!-- ☰ Mobil menü -->
+  <div id="mobileMenu" class="mobile-menu hidden">
+    <a href="#rolam">Rólam</a>
+    <a href="#elonyok">Előnyök</a>
+    <a href="#referencia">Referenciák</a>
+    <a href="#kapcsolat">Kapcsolat</a>
+  </div>
+
+  <!-- ✅ Hero szakasz (logó, szlogen, gomb) -->
   <header class="hero">
-    <img src="ZoltanCode logo.png" alt="ZoltanCode logó" class="logo">
+    <img src="ZoltanCode logo.png" alt="ZoltanCode logó" class="logo" />
     <h1>Olyan weboldalt készítek, ami elad helyetted.</h1>
     <p>Letisztult, gyors, mobilbarát – hogy a legjobb első benyomást keltse.</p>
     <a href="#kapcsolat" class="cta-button">Kapcsolatfelvétel</a>
   </header>
 
+  <!-- ✅ TARTALOM -->
   <main class="container">
     <section id="rolam">
       <h2>Rólam</h2>
@@ -52,8 +64,8 @@
     <section id="kapcsolat">
       <h2>Kapcsolat</h2>
       <form action="mailto:hello@zoltancode.hu" method="post" enctype="text/plain" class="contact-form">
-        <input type="text" name="name" placeholder="Név" required>
-        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="name" placeholder="Név" required />
+        <input type="email" name="email" placeholder="Email" required />
         <textarea name="message" placeholder="Üzenet..." required></textarea>
         <button type="submit">Üzenet küldése</button>
       </form>
@@ -61,7 +73,7 @@
       <p>GitHub: <a href="https://github.com/zoltancode" target="_blank">github.com/zoltancode</a></p>
     </section>
 
-    <section id="referenciak">
+    <section id="referencia">
       <h2>Referencia</h2>
       <div class="card-grid">
         <div class="card">
@@ -77,5 +89,7 @@
     <p>© 2025 – Készítette: <a href="https://zoltancode.hu">ZoltanCode</a></p>
     <p><a href="adatkezeles.html" style="color:#888">Adatkezelési tájékoztató</a></p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
