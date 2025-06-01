@@ -159,20 +159,20 @@ header.hero {
   text-align: center;
   padding: 6rem 2rem 4rem;
   animation: fadeIn 1.5s ease-in;
-  border: 2px solid #e53935;
+  border: 2px solid #609609;
   border-radius: 12px;
-  box-shadow: 0 0 25px rgba(229, 57, 53, 0.6);
+  box-shadow: 0 0 25px rgba(146, 214, 101, 0.6);
   margin: 1rem auto;
   max-width: 1000px;
 }
 
 .logo {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
-  box-shadow: 0 0 20px #43a047;
+  box-shadow: 0 0 30px #43a047;
   animation: pulseGlow 3s infinite alternate;
 }
 
